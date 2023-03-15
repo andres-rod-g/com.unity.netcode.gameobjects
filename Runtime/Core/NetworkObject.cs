@@ -519,7 +519,7 @@ namespace Unity.Netcode
         /// </summary>
         /// <param name="destroyWithScene">Should the object be destroyed when the scene is changed</param>
         /// <param name="specificClientsIds">Clients who will be affected</param>
-        public void SpawnOnSpecificPlayers(bool destroyWithScene = false, List<ulong> specificClientsIds)
+        public void SpawnOnSpecificPlayers(List<ulong> specificClientsIds, bool destroyWithScene = false)
         {
             SpawnOnSpecificClientsInternal(destroyWithScene, specificClientsIds, NetworkManager.ServerClientId, false);
         }
